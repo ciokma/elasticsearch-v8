@@ -10,11 +10,11 @@ class elasticsearch_v8_x
   
   yumrepo { 'elasticsearch':
     ensure     => 'present',
-    descr      => 'Elasticsearch repository for ${version}.x packages',
+    descr      => "Elasticsearch repository for ${version}.x packages",
     gpgcheck   => '1',
     enabled    => '1',
     gpgkey     => 'https://artifacts.elastic.co/GPG-KEY-elasticsearch',
-    baseurl    => 'https://artifacts.elastic.co/packages/${version}.x/yum',
+    baseurl    => "https://artifacts.elastic.co/packages/${version}.x/yum",
   }
   ->
   package {'elasticsearch':
