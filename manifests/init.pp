@@ -28,7 +28,7 @@ class elasticsearch_v8_x
     mode   => '0660',
     owner  => 'root',
     group  => 'elasticsearch',
-    source => 'puppet:///modules/elasticsearchv8/elasticsearch.yml',
+    source => 'puppet:///modules/elasticsearch-v8/elasticsearch.yml',
   }
   ->
   service {'elasticsearch':
