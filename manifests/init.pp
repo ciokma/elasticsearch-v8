@@ -1,6 +1,6 @@
 class elasticsearch_v8_x
 (
-  String                       $version,
+  Integer $version = 8,
 )
 {
 
