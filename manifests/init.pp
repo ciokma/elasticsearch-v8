@@ -1,4 +1,8 @@
-class elasticsearchv8 {
+class elasticsearch_v8_x
+(
+  String                       $version,
+)
+{
 
   class { 'java':
     distribution => jre,
@@ -6,11 +10,11 @@ class elasticsearchv8 {
   
   yumrepo { 'elasticsearch':
     ensure     => 'present',
-    descr      => 'Elasticsearch repository for 8.x packages',
+    descr      => 'Elasticsearch repository for ${version}.x packages',
     gpgcheck   => '1',
     enabled    => '1',
     gpgkey     => 'https://artifacts.elastic.co/GPG-KEY-elasticsearch',
-    baseurl    => 'https://artifacts.elastic.co/packages/8.x/yum',
+    baseurl    => 'https://artifacts.elastic.co/packages/${version}.x/yum',
   }
   ->
   package {'elasticsearch':
